@@ -1,6 +1,6 @@
 ﻿namespace Attendance_Monitoring_System
 {
-    partial class UserAcc
+    partial class UserAcc1
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAcc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAcc1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Logout = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -37,30 +37,29 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClockIn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Timer = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnClockOut = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Timer = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Date = new System.Windows.Forms.Label();
+            this.btnClockIn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.dgvTimeEntries = new System.Windows.Forms.DataGridView();
             this.EntryType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClockType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.userAccBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTimeEntries)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userAccBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTimeEntries)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,12 +70,13 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 451);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Logout
             // 
@@ -145,7 +145,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(176, 35);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label2
             // 
@@ -158,28 +157,98 @@
             this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "DASHBOARD";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(7, 11);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(164, 137);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 151);
+            this.label1.Location = new System.Drawing.Point(3, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 22);
+            this.label1.Size = new System.Drawing.Size(168, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "John Kert Ouano";
+            this.label1.Text = "Neris Luke Rodrigo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.btnClockIn);
+            this.panel4.Location = new System.Drawing.Point(177, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(624, 105);
+            this.panel4.TabIndex = 8;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Tomato;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(394, 50);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(202, 44);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Time-Out";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel6.Controls.Add(this.Timer);
+            this.panel6.Location = new System.Drawing.Point(423, 11);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(173, 28);
+            this.panel6.TabIndex = 8;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // Timer
+            // 
+            this.Timer.AutoSize = true;
+            this.Timer.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Timer.Location = new System.Drawing.Point(16, 0);
+            this.Timer.Name = "Timer";
+            this.Timer.Size = new System.Drawing.Size(62, 28);
+            this.Timer.TabIndex = 5;
+            this.Timer.Text = "Time";
+            this.Timer.Click += new System.EventHandler(this.Timer_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel5.Controls.Add(this.Date);
+            this.panel5.Location = new System.Drawing.Point(9, 11);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(281, 28);
+            this.panel5.TabIndex = 7;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Location = new System.Drawing.Point(0, 0);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(60, 28);
+            this.Date.TabIndex = 6;
+            this.Date.Text = "Date";
+            this.Date.Click += new System.EventHandler(this.Date_Click);
             // 
             // btnClockIn
             // 
@@ -193,74 +262,15 @@
             this.btnClockIn.UseVisualStyleBackColor = false;
             this.btnClockIn.Click += new System.EventHandler(this.btnClockIn_Click);
             // 
-            // timer1
+            // panel3
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Timer
-            // 
-            this.Timer.AutoSize = true;
-            this.Timer.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Timer.Location = new System.Drawing.Point(613, 12);
-            this.Timer.Name = "Timer";
-            this.Timer.Size = new System.Drawing.Size(62, 28);
-            this.Timer.TabIndex = 5;
-            this.Timer.Text = "Time";
-            this.Timer.Click += new System.EventHandler(this.Timer_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.btnClockOut);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.btnClockIn);
-            this.panel4.Location = new System.Drawing.Point(175, 1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(624, 105);
-            this.panel4.TabIndex = 6;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // btnClockOut
-            // 
-            this.btnClockOut.BackColor = System.Drawing.Color.Tomato;
-            this.btnClockOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClockOut.Location = new System.Drawing.Point(394, 50);
-            this.btnClockOut.Name = "btnClockOut";
-            this.btnClockOut.Size = new System.Drawing.Size(202, 44);
-            this.btnClockOut.TabIndex = 4;
-            this.btnClockOut.Text = "Time-Out";
-            this.btnClockOut.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel6.Location = new System.Drawing.Point(423, 11);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(173, 28);
-            this.panel6.TabIndex = 8;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panel5.Controls.Add(this.Date);
-            this.panel5.Location = new System.Drawing.Point(9, 11);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(281, 28);
-            this.panel5.TabIndex = 7;
-            // 
-            // Date
-            // 
-            this.Date.AutoSize = true;
-            this.Date.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(0, 0);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(60, 28);
-            this.Date.TabIndex = 6;
-            this.Date.Text = "Date";
-            this.Date.Click += new System.EventHandler(this.Date_Click);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel3.Controls.Add(this.dgvTimeEntries);
+            this.panel3.Location = new System.Drawing.Point(177, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(629, 351);
+            this.panel3.TabIndex = 9;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // dgvTimeEntries
             // 
@@ -271,7 +281,7 @@
             this.ClockType});
             this.dgvTimeEntries.Location = new System.Drawing.Point(9, 11);
             this.dgvTimeEntries.Name = "dgvTimeEntries";
-            this.dgvTimeEntries.Size = new System.Drawing.Size(604, 326);
+            this.dgvTimeEntries.Size = new System.Drawing.Size(602, 327);
             this.dgvTimeEntries.TabIndex = 0;
             this.dgvTimeEntries.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimeEntries_CellContentClick);
             // 
@@ -293,76 +303,62 @@
             this.ClockType.Name = "ClockType";
             this.ClockType.Width = 110;
             // 
-            // panel3
+            // timer1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel3.Controls.Add(this.dgvTimeEntries);
-            this.panel3.Location = new System.Drawing.Point(175, 101);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(624, 348);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // userAccBindingSource
-            // 
-            this.userAccBindingSource.DataSource = typeof(Attendance_Monitoring_System.UserAcc);
-            // 
-            // UserAcc
+            // UserAcc1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Timer);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "UserAcc";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Attendance Monitoring System";
-            this.Load += new System.EventHandler(this.UserAcc_Load);
+            this.Name = "UserAcc1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.UserAcc1_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTimeEntries)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userAccBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTimeEntries)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnClockIn;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label Timer;
-        private System.Windows.Forms.Button Logout;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label Date;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label Timer;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.BindingSource userAccBindingSource;
+        private System.Windows.Forms.Label Date;
+        private System.Windows.Forms.Button btnClockIn;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvTimeEntries;
         private System.Windows.Forms.DataGridViewTextBoxColumn EntryType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClockType;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnClockOut;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +14,12 @@ namespace Attendance_Monitoring_System
 {
     public partial class UserAcc : Form
     {
+        private DateTime timeIn;
+        private DateTime timeOut;
+        private bool clockedIn;
+        private bool sessionStarted = false;
+        private List<TimeEntry> timeEntries = new List<TimeEntry>();
+
         public UserAcc()
         {
             InitializeComponent();
@@ -41,16 +49,6 @@ namespace Attendance_Monitoring_System
             button3.FlatAppearance.BorderSize = 0;
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Logout_Click(object sender, EventArgs e)
         {
             new FormMain().Show();
@@ -66,5 +64,99 @@ namespace Attendance_Monitoring_System
         {
             Date.Text = DateTime.Now.ToLongDateString();
         }
+        private void InitializeDataGridView()
+        {
+            // Add columns to the DataGridView
+            dgvTimeEntries.ColumnCount = 3;
+            dgvTimeEntries.Columns[0].Name = "EntryType";
+            dgvTimeEntries.Columns[1].Name = "Time";
+            dgvTimeEntries.Columns[2].Name = "ClockType";
+        }
+
+        private void btnClockIn_Click(object sender, EventArgs e)
+        {
+            if (!clockedIn)
+            {
+                DateTime timeIn = DateTime.Now;
+                timeEntries.Add(new TimeEntry { EntryType = "Time In", Time = timeIn, ClockType = "In" });
+                UpdateDataGridView();
+
+                btnClockIn.Enabled = false;
+                btnClockOut.Enabled = true;
+                clockedIn = true;
+            }
+            else
+            {
+                MessageBox.Show("You Have Already Timed In");
+            }
+        }
+
+        private void btnClockOut_Click(object sender, EventArgs e)
+        {
+            if (clockedIn)
+            {
+                DateTime timeOut = DateTime.Now;
+                timeEntries.Add(new TimeEntry { EntryType = "Time Out", Time = timeOut, ClockType = "Out" });
+                UpdateDataGridView();
+
+                btnClockOut.Enabled = false;
+
+                clockedIn = false;
+            }
+            else
+            {
+                MessageBox.Show("You Need To Clock In First");
+            }
+        }
+
+        private void UpdateDataGridView()
+        {
+            dgvTimeEntries.Rows.Clear();
+            foreach (var entry in timeEntries)
+            {
+                dgvTimeEntries.Rows.Add(entry.EntryType, entry.Time, entry.ClockType);
+            }
+        }
+
+        private void dgvTimeEntries_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Date_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
+    public class TimeEntry
+    {
+        public string EntryType { get; set; }
+        public DateTime Time { get; set; }
+        public string ClockType { get; set; }
+    }
+
 }
+
+    public class TimeEntry
+    {
+        public string ClockType { get; set; }
+        public DateTime Time { get; set; }
+    }
+
+

@@ -85,8 +85,8 @@ namespace Attendance_Monitoring_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-                     
-            
+
+
             if (userInput.Text == "Admin" && passInput.Text == "1234")
             {
                 new AdminAcc().Show();
@@ -98,10 +98,20 @@ namespace Attendance_Monitoring_System
                 new UserAcc().Show();
                 this.Hide();
             }
+            else if (userInput.Text == "Lok" && passInput.Text == "lokas")
+            {
+                new UserAcc1().Show();
+                this.Hide();
+            }
+            else if (userInput.Text == "Marvn" && passInput.Text == "marvs")
+            {
+                new UserAcc2().Show();
+                this.Hide();
+            }
 
             else
             {
-                MessageBox.Show("The username or password is Incorrect.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("The username or password is Incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 userInput.Clear();
                 passInput.Clear();
                 userInput.Focus();
