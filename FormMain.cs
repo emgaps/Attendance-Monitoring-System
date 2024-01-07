@@ -83,6 +83,18 @@ namespace Attendance_Monitoring_System
                 btnEnter.PerformClick();
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                passInput.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passInput.UseSystemPasswordChar = true;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 

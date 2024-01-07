@@ -41,12 +41,7 @@ namespace Attendance_Monitoring_System
         {
             button2.FlatStyle = FlatStyle.Flat;
             button2.FlatAppearance.BorderSize = 0;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.FlatAppearance.BorderSize = 0;
+            
         }
 
         private void Logout_Click(object sender, EventArgs e)
