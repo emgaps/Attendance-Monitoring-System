@@ -40,7 +40,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnClockOut = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.Timer = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -186,7 +186,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.btnClockOut);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.btnClockIn);
@@ -196,17 +196,17 @@
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // button4
+            // btnClockOut
             // 
-            this.button4.BackColor = System.Drawing.Color.Tomato;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(394, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(202, 44);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Time-Out";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnClockOut.BackColor = System.Drawing.Color.Tomato;
+            this.btnClockOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClockOut.Location = new System.Drawing.Point(394, 50);
+            this.btnClockOut.Name = "btnClockOut";
+            this.btnClockOut.Size = new System.Drawing.Size(202, 44);
+            this.btnClockOut.TabIndex = 4;
+            this.btnClockOut.Text = "Time-Out";
+            this.btnClockOut.UseVisualStyleBackColor = false;
+            this.btnClockOut.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel6
             // 
@@ -348,7 +348,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClockOut;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label Timer;
         private System.Windows.Forms.Panel panel5;

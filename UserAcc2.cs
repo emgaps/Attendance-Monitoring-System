@@ -12,6 +12,12 @@ namespace Attendance_Monitoring_System
 {
     public partial class UserAcc2: Form
     {
+        private DateTime timeIn;
+        private DateTime timeOut;
+        private bool clockedIn;
+        private bool sessionStarted = false;
+        private List<TimeEntry> timeEntries = new List<TimeEntry>();
+
         public UserAcc2()
         {
             InitializeComponent();
@@ -48,5 +54,51 @@ namespace Attendance_Monitoring_System
         {
             Timer.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void btnClockIn_Click(object sender, EventArgs e)
+        {
+            if (!clockedIn)
+            {
+                DateTime timeIn = DateTime.Now;
+                timeEntries.Add(new TimeEntry { EntryType = "Time In", Time = timeIn, ClockType = "In" });
+                UpdateDataGridView();
+
+                btnClockIn.Enabled = false;
+                btnClockOut.Enabled = true;
+                clockedIn = true;
+            }
+            else
+            {
+                MessageBox.Show("You Have Already Timed In");
+            }
+        }
+
+        private void btnClockOut_Click(object sender, EventArgs e)
+        {
+            if (clockedIn)
+            {
+                DateTime timeOut = DateTime.Now;
+                timeEntries.Add(new TimeEntry { EntryType = "Time Out", Time = timeOut, ClockType = "Out" });
+                UpdateDataGridView();
+
+                btnClockOut.Enabled = false;
+
+                clockedIn = false;
+            }
+            else
+            {
+                MessageBox.Show("You Need To Clock In First");
+            }
+        }
+        private void UpdateDataGridView()
+        {
+            dgvTimeEntries.Rows.Clear();
+            foreach (var entry in timeEntries)
+            {
+                dgvTimeEntries.Rows.Add(entry.EntryType, entry.Time, entry.ClockType);
+            }
+        }
     }
-}
+
+    }
+
