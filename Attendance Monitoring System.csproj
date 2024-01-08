@@ -59,6 +59,12 @@
     <Compile Include="UserAcc1.Designer.cs">
       <DependentUpon>UserAcc1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserAcc1_Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAcc1_Attendance.Designer.cs">
+      <DependentUpon>UserAcc1_Attendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAcc2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,18 @@
     </Compile>
     <Compile Include="UserAcc.Designer.cs">
       <DependentUpon>UserAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAcc2_Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAcc2_Attendance.Designer.cs">
+      <DependentUpon>UserAcc2_Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAcc_Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAcc_Attendance.Designer.cs">
+      <DependentUpon>UserAcc_Attendance.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminAcc.resx">
       <DependentUpon>AdminAcc.cs</DependentUpon>
@@ -101,8 +119,17 @@
     <EmbeddedResource Include="UserAcc1.resx">
       <DependentUpon>UserAcc1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserAcc1_Attendance.resx">
+      <DependentUpon>UserAcc1_Attendance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserAcc2.resx">
       <DependentUpon>UserAcc2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAcc2_Attendance.resx">
+      <DependentUpon>UserAcc2_Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAcc_Attendance.resx">
+      <DependentUpon>UserAcc_Attendance.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\UserAcc.datasource" />
     <None Include="Properties\Settings.settings">

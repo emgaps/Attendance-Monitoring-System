@@ -75,6 +75,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 451);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Logout
             // 
@@ -140,6 +141,7 @@
             this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "DASHBOARD";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -152,6 +154,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -162,6 +165,7 @@
             this.label1.Size = new System.Drawing.Size(146, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "John Kert Ouano";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnClockIn
             // 
@@ -171,7 +175,7 @@
             this.btnClockIn.Name = "btnClockIn";
             this.btnClockIn.Size = new System.Drawing.Size(202, 44);
             this.btnClockIn.TabIndex = 3;
-            this.btnClockIn.Text = "Time-In";
+            this.btnClockIn.Text = "Check-In";
             this.btnClockIn.UseVisualStyleBackColor = false;
             this.btnClockIn.Click += new System.EventHandler(this.btnClockIn_Click);
             // 
@@ -184,6 +188,7 @@
             // Timer
             // 
             this.Timer.AutoSize = true;
+            this.Timer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Timer.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Timer.Location = new System.Drawing.Point(613, 12);
             this.Timer.Name = "Timer";
@@ -213,8 +218,9 @@
             this.btnClockOut.Name = "btnClockOut";
             this.btnClockOut.Size = new System.Drawing.Size(202, 44);
             this.btnClockOut.TabIndex = 4;
-            this.btnClockOut.Text = "Time-Out";
+            this.btnClockOut.Text = "Check-Out";
             this.btnClockOut.UseVisualStyleBackColor = false;
+            this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click_1);
             // 
             // panel6
             // 
@@ -223,6 +229,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(173, 28);
             this.panel6.TabIndex = 8;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel5
             // 
@@ -232,6 +239,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(281, 28);
             this.panel5.TabIndex = 7;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // Date
             // 
@@ -246,6 +254,7 @@
             // 
             // dgvTimeEntries
             // 
+            this.dgvTimeEntries.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.dgvTimeEntries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTimeEntries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EntryType,
@@ -253,6 +262,7 @@
             this.ClockType});
             this.dgvTimeEntries.Location = new System.Drawing.Point(9, 11);
             this.dgvTimeEntries.Name = "dgvTimeEntries";
+            this.dgvTimeEntries.RowHeadersWidth = 222;
             this.dgvTimeEntries.Size = new System.Drawing.Size(604, 326);
             this.dgvTimeEntries.TabIndex = 0;
             this.dgvTimeEntries.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimeEntries_CellContentClick);
@@ -288,6 +298,7 @@
             // userAccBindingSource
             // 
             this.userAccBindingSource.DataSource = typeof(Attendance_Monitoring_System.UserAcc);
+            this.userAccBindingSource.CurrentChanged += new System.EventHandler(this.userAccBindingSource_CurrentChanged);
             // 
             // UserAcc
             // 

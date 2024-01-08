@@ -70,12 +70,10 @@ namespace Attendance_Monitoring_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            new UserAcc1_Attendance().Show();
+            this.Hide();
         }
 
         private void Logout_Click(object sender, EventArgs e)

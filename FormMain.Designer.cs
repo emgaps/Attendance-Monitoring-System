@@ -97,10 +97,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 23F, System.Drawing.FontStyle.Italic);
-            this.label2.Location = new System.Drawing.Point(561, 29);
+            this.label2.Font = new System.Drawing.Font("Engravers MT", 23.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(522, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 35);
+            this.label2.Size = new System.Drawing.Size(153, 36);
             this.label2.TabIndex = 4;
             this.label2.Text = "Login";
             // 
@@ -148,9 +148,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(68, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 432);
+            this.pictureBox1.Size = new System.Drawing.Size(332, 381);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -158,11 +158,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(735, 297);
+            this.checkBox1.Location = new System.Drawing.Point(708, 298);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(53, 17);
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Show";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

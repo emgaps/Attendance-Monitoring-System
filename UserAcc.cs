@@ -41,6 +41,8 @@ namespace Attendance_Monitoring_System
         {
             button2.FlatStyle = FlatStyle.Flat;
             button2.FlatAppearance.BorderSize = 0;
+            new UserAcc_Attendance().Show();
+            this.Hide();
             
         }
 
@@ -134,6 +136,46 @@ namespace Attendance_Monitoring_System
         }
 
         private void Date_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClockOut_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void userAccBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

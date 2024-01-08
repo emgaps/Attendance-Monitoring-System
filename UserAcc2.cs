@@ -98,6 +98,14 @@ namespace Attendance_Monitoring_System
                 dgvTimeEntries.Rows.Add(entry.EntryType, entry.Time, entry.ClockType);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            new UserAcc2_Attendance().Show();
+            this.Hide();
+        }
     }
 
     }
