@@ -220,7 +220,7 @@
             this.btnClockOut.TabIndex = 4;
             this.btnClockOut.Text = "Check-Out";
             this.btnClockOut.UseVisualStyleBackColor = false;
-            this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click_1);
+            this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click);
             // 
             // panel6
             // 

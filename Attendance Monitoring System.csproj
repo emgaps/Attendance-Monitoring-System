@@ -47,11 +47,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accMgmt.Designer.cs">
+      <DependentUpon>accMgmt.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminAcc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminAcc.Designer.cs">
       <DependentUpon>AdminAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manzo.Designer.cs">
+      <DependentUpon>Manzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ouano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ouano.Designer.cs">
+      <DependentUpon>Ouano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rodrigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rodrigo.Designer.cs">
+      <DependentUpon>Rodrigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentHistory.Designer.cs">
+      <DependentUpon>studentHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="UserAcc1.cs">
       <SubType>Form</SubType>
@@ -97,11 +127,20 @@
     <Compile Include="UserAcc_Attendance.Designer.cs">
       <DependentUpon>UserAcc_Attendance.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="accMgmt.resx">
+      <DependentUpon>accMgmt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminAcc.resx">
       <DependentUpon>AdminAcc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manzo.resx">
+      <DependentUpon>Manzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ouano.resx">
+      <DependentUpon>Ouano.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,6 +152,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rodrigo.resx">
+      <DependentUpon>Rodrigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentHistory.resx">
+      <DependentUpon>studentHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserAcc.resx">
       <DependentUpon>UserAcc.cs</DependentUpon>
     </EmbeddedResource>

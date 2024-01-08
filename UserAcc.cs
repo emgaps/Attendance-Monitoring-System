@@ -160,11 +160,6 @@ namespace Attendance_Monitoring_System
 
         }
 
-        private void btnClockOut_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
