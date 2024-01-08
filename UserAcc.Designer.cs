@@ -314,7 +314,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Attendance Monitoring System";
+            this.Text = "CheckInSync";
             this.Load += new System.EventHandler(this.UserAcc_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

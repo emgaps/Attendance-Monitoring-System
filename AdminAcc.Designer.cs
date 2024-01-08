@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminAcc));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Logout = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.showCalendarButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +75,17 @@
             this.Logout.UseVisualStyleBackColor = false;
             this.Logout.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox1.BackgroundImage = global::Attendance_Monitoring_System.Properties.Resources.blank_profile_picture_image_holder_with_a_crown_vector_42411540;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 101);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -96,36 +107,15 @@
             this.panel2.Size = new System.Drawing.Size(171, 139);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
+            // button1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(213, 241);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(171, 139);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.panel4.Controls.Add(this.showCalendarButton);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(379, 41);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(171, 139);
-            this.panel4.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Moccasin;
-            this.panel5.Controls.Add(this.panel4);
-            this.panel5.Controls.Add(this.panel3);
-            this.panel5.Controls.Add(this.panel2);
-            this.panel5.Location = new System.Drawing.Point(183, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(605, 426);
-            this.panel5.TabIndex = 3;
+            this.button1.Location = new System.Drawing.Point(46, 96);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Show";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label2
             // 
@@ -139,35 +129,15 @@
             this.label2.Text = "Student \r\nHistory";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // panel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 58);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Account\r\nManagement";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 35);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Calendar";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(46, 96);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Show";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(213, 241);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(171, 139);
+            this.panel3.TabIndex = 2;
             // 
             // button2
             // 
@@ -179,6 +149,26 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 58);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Account\r\nManagement";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel4.Controls.Add(this.showCalendarButton);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(379, 41);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(171, 139);
+            this.panel4.TabIndex = 2;
+            // 
             // showCalendarButton
             // 
             this.showCalendarButton.Location = new System.Drawing.Point(51, 96);
@@ -189,16 +179,26 @@
             this.showCalendarButton.UseVisualStyleBackColor = true;
             this.showCalendarButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox1
+            // label4
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBox1.BackgroundImage = global::Attendance_Monitoring_System.Properties.Resources.blank_profile_picture_image_holder_with_a_crown_vector_42411540;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 101);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 35);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Calendar";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Moccasin;
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Location = new System.Drawing.Point(183, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(605, 426);
+            this.panel5.TabIndex = 3;
             // 
             // AdminAcc
             // 
@@ -211,9 +211,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Attendance Monitoring System";
+            this.Text = "CheckInSync";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -221,7 +222,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

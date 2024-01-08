@@ -645,7 +645,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "UserAcc2_Attendance";
-            this.Text = "UserAcc2_Attendance";
+            this.Text = "CheckInSync";
             this.Load += new System.EventHandler(this.UserAcc2_Attendance_Load);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();

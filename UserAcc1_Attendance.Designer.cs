@@ -77,8 +77,8 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.userAccBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel18.SuspendLayout();
             this.panel16.SuspendLayout();
@@ -611,17 +611,6 @@
             this.panel2.Size = new System.Drawing.Size(176, 35);
             this.panel2.TabIndex = 2;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Neris Luke Rodrigo";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -633,6 +622,17 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Neris Luke Rodrigo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // userAccBindingSource
             // 
@@ -650,7 +650,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UserAcc1_Attendance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Attendance Monitoring System";
+            this.Text = "CheckInSync";
             this.Load += new System.EventHandler(this.UserAcc1_Attendance_Load);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();

@@ -167,7 +167,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "studentHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "studentHistory";
+            this.Text = "CheckInSync";
             this.Load += new System.EventHandler(this.studentHistory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -291,7 +291,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Name = "UserAcc2";
-            this.Text = "Form2";
+            this.Text = "CheckInSync";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
